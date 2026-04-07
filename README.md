@@ -1,1 +1,9 @@
-# KyuhyunKim_Minimum_Viable_Product
+# Minimum Viable Product: Danger in Cruising Locations in the Damron Guides
+
+This project builds a minimum viable product pipeline to analyze danger indications in cruising locations listed in the Damron Guides. The historical question that I'm trying to answer is whether the proportion of cruising locations marked as dangerous increased between the earlier and later years of the guides, and how sensitive this trend analysis is to different data-cleaning choices. 
+
+The notebook loads the dataset named data.rds and filters the data to identify curising locations. It isolates locations marked with danger-related labels. In the primary method, I classified dangerous locations by searching the 'amenityfeatures' field for the label 'HOT' and AYOR'. After grouping the data together by year, I calculated the percentage of cruising locations that carried these danger indications and visualized the results as a time series. Then I compared the two different historical periods of the 1965-1975 to 1976-1985 to test whether danger indications became more common over the passage of time. 
+
+The biggest technical hurdle was organizing the data so that the historical categories that I wanted to analyze could be computationally analyzed. Specifically, I had to decide how to identify both cruising and danger with a method that was consistent with the archive while still having that characterstic of transperancy and reproducibility. 
+
+The results suggest that the danger-marked cruising locations become more common in the later periods. I also incldude a second method that searches descriptions for danger-related keywords. This alternative approach produces a very different scale and trend, demonstrating that these small changes in data-cleaning descisions can siginificantly affect the final interpreation. Because of this, this MVP not only supports the historical argument that we aimed to answer, but it also demonsrated the importance of methodological choices in analysis.
